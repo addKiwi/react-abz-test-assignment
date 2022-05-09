@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.ttf');
+}
+@import './normalize.scss';
+@import './mixins';
+
+html {
+  font-family: Nunito;
+}
+
+.button {
+  box-sizing: border-box;
+  border: none;
+  background-color: #f4e041;
+  color: black;
+  padding: 4px 0;
+  text-align: center;
+  min-width: 100px;
+  border-radius: 80px;
+  font-size: 16px;
+  line-height: 26px;
+
+  &:hover {
+    background-color: #ffe302;
+  }
+
+  &--disabled {
+    background-color: #b4b4b4;
+    color: white;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: #b4b4b4;
+      color: white;
+    }
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+

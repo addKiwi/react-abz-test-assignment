@@ -1,0 +1,31 @@
+@import '../../styles/mixins';
+
+.header {
+    background-image: url(../../assets/pexels-alexandr-podvalny-1227513.jpeg);
+    padding: 40px 0 71px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    @include onTablet () {
+        padding: 89px 0 88px;
+    }
+
+    @include onDesktop () {
+        padding: 164px 0;
+    }
+
+    &__container {
+        max-width: 328px;
+        color: white;
+
+        @include onDesktop () {
+            max-width: 380px;
+        }
+    }
+
+    &__text {
+        padding: 21px 0 32px;
+    }
+}
