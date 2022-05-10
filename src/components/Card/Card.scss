@@ -1,0 +1,36 @@
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 254px;
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+
+    &__email {
+        font-size: 16px;
+        line-height: 26px;
+        color: black;
+        text-decoration: none;
+    }
+
+    &__phone {
+        font-size: 16px;
+        line-height: 26px;
+        color: black;
+        text-decoration: none;
+    }
+}
