@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+.WPost_content {
+    padding-top: 140px;
+    color: $text-black;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

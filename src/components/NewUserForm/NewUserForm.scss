@@ -1,0 +1,20 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    min-width: 328px;
+
+    &__select {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    &__input {
+        margin-bottom: 50px;
+    }
+
+    &__file {
+        margin-bottom: 50px;
+    }
+}
