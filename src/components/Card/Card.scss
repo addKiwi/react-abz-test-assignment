@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center; 
     min-height: 254px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &__img {
         width: 70px;

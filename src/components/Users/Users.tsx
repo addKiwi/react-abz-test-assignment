@@ -48,13 +48,29 @@ const list = [
 ]
 
 export const Users: React.FC = () => {
-
+  const [next, setNext] = useState('');
   const [users, setUsers] = useState<Person[]>([]);
+
+  const loadMore = () => {
+    getUsers(next)
+      .then(data => {
+        setUsers(prev => [...prev, ...data.users]);
+
+        return data;
+      })
+      .then(next => setNext(next.links.next_url))
+  }
 
   useEffect(() => {
     getUsers()
-      .then(data => setUsers(data.users));
+      .then(data => {
+        setUsers(data.users)
+      
+        return data;
+      })
+      .then(data => setNext(data.links.next_url));
   }, []);
+
   return (
     <>
       <div className="cards">
@@ -64,9 +80,16 @@ export const Users: React.FC = () => {
           ))
         }
       </div>
-      <button className="button">
-      Show more
-      </button>
+      { next !== null &&
+        (
+          <button 
+          className="button"
+          onClick={loadMore}  
+          >
+          Show more
+          </button>
+        )
+      }
     </>
   )
 }
